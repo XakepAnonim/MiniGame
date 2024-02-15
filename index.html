@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniGame</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login_screen">
+        <h1 class="login__title">MiniGame</h1>
+        <div class="map-selection">
+            <div class="map" onclick="selectMap(1)">Map 1</div>
+            <div class="map" onclick="selectMap(2)">Map 2</div>
+            <div class="map" onclick="selectMap(3)">Map 3</div>
+        </div>
+        <label for="player_name"></label>
+        <input type="text" id="player_name" placeholder="Enter Name">
+        <button class="start" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game_screen">
+        <div id="player"></div>
+        <div id="main">
+            <div id="main__style">
+                <p id="player_name_display"></p>
+                <p id="world_time"></p>
+                <p id="game_time"></p>
+                <p id="heart_counter"></p>
+            </div>
+        </div>
+        <div id="finish"></div>
+    </div>
+
+    <div id="result_screen">
+        <div id="result__style">
+            <h2>Game Over</h2>
+            <p id="result_time"></p>
+            <p id="result_monsters"></p>
+            <p id="result_traps"></p>
+            <p id="result_hearts"></p>
+            <button id="play_again_button">Play Again</button>
+        </div>
+    </div>
+
+    <div id="pause_screen">
+        <div id="pause__style">
+            <h2>Game Paused</h2>
+            <p>Press ESC to continue</p>
+        </div>
+    </div>
+
+    <script defer src="./main.js"></script>
+</body>
+</html>

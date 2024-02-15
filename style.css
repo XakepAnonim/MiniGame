@@ -1,0 +1,261 @@
+* {
+    font-family: "Hammersmith One", sans-serif;
+    margin: 0;
+}
+
+body {
+    background: url('assets/map1.jpg');
+}
+
+/* Menu */
+#login_screen {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#player_name {
+    width: 250px;
+    margin-bottom: 120px;
+    padding: 8px;
+    font-size: 26px;
+    margin-top: 50px;
+    background-color: #E5E3E3;
+    border: none;
+    outline: none;
+    color: #4A4A4A;
+    text-align: center;
+}
+
+.start {
+    background-color: #7EE559;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    margin-top: -111px;
+    width: 266px;
+}
+
+.start:hover {
+    background-color: #6cc84a;
+}
+
+.login__title {
+    color: #ffffff;
+    font-size: 154px;
+    margin-top: -30px;
+    text-shadow: 0 1px 0 #c4c4c4, 0 2px 0 #c4c4c4, 0 3px 0 #c4c4c4, 0 4px 0 #c4c4c4, 0 5px 0 #c4c4c4, 0 6px 0 #c4c4c4, 0 7px 0 #c4c4c4, 0 8px 0 #c4c4c4, 0 9px 0 #c4c4c4;
+}
+
+
+/* Game */
+#game_screen {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#main {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#main__style {
+    color: #fff;
+    font-size: 31px;
+    text-align: left;
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+#player_name_display,
+#world_time,
+#game_time,
+#heart_counter {
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#finish {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.7);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Player */
+#player {
+    position: absolute;
+    background-color: purple;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* Monsters and Traps */
+.monster {
+    width: 55px;
+    height: 55px;
+    background: url('assets/bull.png') no-repeat center center/cover;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.trap {
+    width: 100px;
+    height: 100px;
+    background: url('assets/trap.png') no-repeat center center/cover;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+/* Pause Game */
+#pause_screen {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#pause_screen h2 {
+    color: #fff;
+    font-size: 128px;
+}
+
+#pause_screen p {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 20%;
+}
+
+#pause__style {
+    margin-top: 15%;
+    margin-left: 30%;
+}
+
+
+/* GameOver */
+#result_screen {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#result_screen h2 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+#result_screen p {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#result_screen button {
+    background-color: #7EE559;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+}
+
+#result_screen button:hover {
+    background-color: #6cc84a;
+}
+
+#result__style {
+    margin-top: 15%;
+    margin-left: 40%;
+}
+
+
+/* Maps */
+.map-selection {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.map {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #7EE559;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+
+.map:hover {
+    background-color: #6cc84a;
+}
